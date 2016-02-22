@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Bryan Galviz</title>
+	<%= favicon_link_tag '/far-bg-ico.ico' %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<br>
+			<div class="col-md-5 col-sm-6">
+				<div class="my pull-left clearfix visible-sm visible-md visible-lg">
+					<ul class="nav nav-tabs">
+						<% if @cont== 1 %>
+						<li role="presentation"><a href="#perfil" class="font-sm clearfix visible-sm">Perfil</a></li>
+						<li role="presentation"><a href="#conocimientos" class="font-sm clearfix visible-sm ">Conocimientos</a></li>
+						<li role="presentation"><a href="#experiencia" class="font-sm clearfix visible-sm ">Exp. Laboral</a></li>
+						<li role="presentation"><a href="#contacto" class="font-sm clearfix visible-sm ">Contacto</a></li>
+						<li role="presentation"><a href="#perfil" class="visible-md visible-lg">Perfil</a></li>
+						<li role="presentation"><a href="#conocimientos" class="clearfix visible-md visible-lg ">Conocimientos</a></li>
+						<li role="presentation"><a href="#experiencia" class="clearfix visible-md visible-lg ">Exp. Laboral</a></li>
+						<li role="presentation"><a href="#contacto" class="clearfix visible-md visible-lg ">Contacto</a></li>
+						<% else %>
+						<li role="presentation" class="font-sm visible-sm"><a href="/">Volver</a></li>
+						<li role="presentation" class="visible-lg visible-md"><a href="/">Volver</a></li>
+						<li class="oculto-1 clearfix visible-sm"></li>
+						<li class="oculto-2 clearfix visible-lg visible-md"></li>
+						<% end %>
+					</ul>
+
+					<div class="center" id="center">
+						<img src="/mpz.jpg" alt="perfil" class="img-thumbnail img-circle">
+					</div>
+
+					<div class="info center">
+						<h3 class="learfix visible-md visible-lg"><strong>Bryan Mauricio Galviz</strong></h3>
+						<h3 class="learfix visible-sm"><strong>Bryan M. Galviz</strong></h3>
+						<ul class="nav">
+							<li role="presentation" class="active"><a title="Profesión"><strong>Rango: </strong>Programador Junior</a></li>
+							<li role="presentation" class="active"><a title="Fecha de nacimiento"><strong>Fecha de Nacimiento: </strong>04/1992</a></li>
+							<li role="presentation" class="active"><a title="Estado civil"><strong>Estado Civil: </strong>Casado</a></li>
+							<li role="presentation" class="active"><a title="Ciudades de mi Interes">Bogota-Manizales</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-7 col-sm-6">
+				<%= yield %>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>
